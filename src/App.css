@@ -43,6 +43,15 @@
   letter-spacing: 0.08em;
   text-shadow: 0 1px 8px rgb(255 255 255 / 55%);
   animation: hint-breath 2.6s ease-in-out infinite;
+  transition:
+    opacity 450ms ease,
+    transform 450ms ease;
+}
+
+.invitation-scene.is-envelope-open .open-hint {
+  opacity: 0;
+  animation: none;
+  transform: translateY(8px);
 }
 
 @keyframes hint-breath {
