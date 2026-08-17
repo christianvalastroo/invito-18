@@ -3,6 +3,12 @@
   min-height: 100svh;
   overflow: hidden;
   isolation: isolate;
+  display: grid;
+  place-items: center;
+  padding:
+    max(24px, env(safe-area-inset-top))
+    20px
+    max(28px, env(safe-area-inset-bottom));
 
   background-image: url('./assets/images/silver-glitter.jpg');
   background-position: center;
@@ -20,4 +26,41 @@
     rgb(255 255 255 / 10%) 0%,
     rgb(25 28 32 / 18%) 100%
   );
+}
+
+.invitation-hero {
+  display: grid;
+  justify-items: center;
+  gap: clamp(22px, 5svh, 38px);
+  width: min(100%, 620px);
+}
+
+.open-hint {
+  margin: 0;
+  color: rgb(29 33 39 / 72%);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 4.5vw, 1.3rem);
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 8px rgb(255 255 255 / 55%);
+  animation: hint-breath 2.6s ease-in-out infinite;
+}
+
+@keyframes hint-breath {
+  50% {
+    opacity: 0.48;
+    transform: translateY(2px);
+  }
+}
+
+@media (max-height: 620px) {
+  .invitation-hero {
+    gap: 18px;
+    transform: scale(0.88);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .open-hint {
+    animation: none;
+  }
 }
