@@ -1,4 +1,5 @@
 import './Envelope.css'
+import InvitationCard from '../InvitationCard/InvitationCard'
 
 function Envelope({ isOpen, onOpen }) {
   return (
@@ -14,6 +15,7 @@ function Envelope({ isOpen, onOpen }) {
 
       <span className="envelope" aria-hidden="true">
         <span className="envelope-back" />
+        <InvitationCard />
         <span className="envelope-flap" />
         <span className="envelope-pocket" />
         <span className="envelope-seal">

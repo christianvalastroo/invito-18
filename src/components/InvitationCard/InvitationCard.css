@@ -1,0 +1,72 @@
+.invitation-card {
+  position: absolute;
+  z-index: 3;
+  right: 7%;
+  bottom: 5%;
+  left: 7%;
+  display: flex;
+  height: 122%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgb(216 222 228 / 42%);
+  border-radius: 3px;
+  color: #f7f8f9;
+  background:
+    radial-gradient(circle at 18% 22%, rgb(255 255 255 / 22%) 0 0.6px, transparent 1px),
+    radial-gradient(circle at 76% 62%, rgb(255 255 255 / 14%) 0 0.55px, transparent 1px),
+    linear-gradient(145deg, rgb(255 255 255 / 7%), transparent 38%),
+    #242a31;
+  background-size: 23px 21px, 31px 29px, auto, auto;
+  box-shadow:
+    0 10px 18px rgb(20 24 29 / 22%),
+    inset 0 0 28px rgb(0 0 0 / 16%);
+  transform: translateY(50%);
+}
+
+.invitation-card::before {
+  position: absolute;
+  inset: clamp(10px, 3vw, 18px);
+  border: 1px solid rgb(213 219 225 / 32%);
+  content: '';
+  pointer-events: none;
+}
+
+.card-kicker {
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.45rem, 1.8vw, 0.68rem);
+  letter-spacing: 0.24em;
+}
+
+.card-age {
+  margin-top: 2%;
+  color: #d6dbe0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.2rem, 15vw, 5.3rem);
+  font-weight: 400;
+  line-height: 0.9;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 32%);
+}
+
+.card-name {
+  margin-top: 4%;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.45rem, 7vw, 2.45rem);
+  letter-spacing: 0.02em;
+}
+
+.card-divider {
+  width: 28%;
+  height: 1px;
+  margin: 5% 0 4%;
+  background: linear-gradient(90deg, transparent, #cbd1d6, transparent);
+}
+
+.card-date {
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.5rem, 2vw, 0.72rem);
+  letter-spacing: 0.16em;
+}
