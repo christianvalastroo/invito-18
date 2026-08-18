@@ -82,7 +82,7 @@
   background-size: 19px 21px, 27px 25px, auto;
   filter: drop-shadow(0 4px 3px rgb(34 39 45 / 12%));
   transform-origin: top;
-  backface-visibility: hidden;
+  backface-visibility: visible;
   transition:
     transform 1250ms cubic-bezier(0.34, 0.08, 0.18, 1),
     filter 900ms ease,

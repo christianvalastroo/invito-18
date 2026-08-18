@@ -5,7 +5,7 @@
   left: 5%;
   display: flex;
   width: 90%;
-  height: 128%;
+  height: 90%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@
     inset 0 0 38px rgb(49 58 66 / 18%),
     inset 0 1px 0 rgb(255 255 255 / 76%);
   opacity: 0;
-  transform: translateY(50%);
+  transform: translateY(0);
   transform-origin: center;
   will-change: transform, width, height;
 }
@@ -240,22 +240,22 @@
     bottom: 5%;
     left: 5%;
     width: 90%;
-    height: 128%;
+    height: 90%;
     opacity: 1;
-    transform: translateY(50%);
+    transform: translateY(0);
   }
 
-  48% {
+  58% {
     z-index: 3;
     bottom: 5%;
     left: 5%;
     width: 90%;
-    height: 128%;
+    height: 90%;
     opacity: 1;
-    transform: translateY(-42%);
+    transform: translateY(-108%);
   }
 
-  49% {
+  59% {
     z-index: 8;
   }
 
@@ -295,22 +295,22 @@
       bottom: 5%;
       left: 5%;
       width: 90%;
-      height: 128%;
+      height: 90%;
       opacity: 1;
-      transform: translateY(50%);
+      transform: translateY(0);
     }
 
-    48% {
+    58% {
       z-index: 3;
       bottom: 5%;
       left: 5%;
       width: 90%;
-      height: 128%;
+      height: 90%;
       opacity: 1;
-      transform: translateY(-38%);
+      transform: translateY(-108%);
     }
 
-    49% {
+    59% {
       z-index: 8;
     }
 
