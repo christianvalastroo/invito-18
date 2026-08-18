@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import BackgroundGlints from './components/BackgroundGlints/BackgroundGlints'
 import Envelope from './components/Envelope/Envelope'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <main className={`invitation-scene ${isEnvelopeOpen ? 'is-envelope-open' : ''}`}>
       <div className="scene-overlay" aria-hidden="true" />
+      <BackgroundGlints />
 
       <section className="invitation-hero" aria-label="Invito al diciottesimo di Gioele">
         <Envelope

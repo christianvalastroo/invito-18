@@ -1,0 +1,85 @@
+.background-glints {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.background-glint {
+  position: absolute;
+  top: var(--glint-y);
+  left: var(--glint-x);
+  width: var(--glint-size);
+  aspect-ratio: 1;
+  opacity: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 7px 3px #fff,
+    0 0 22px 8px rgb(213 231 245 / 72%);
+  transform: translate(-50%, -50%) scale(0.15);
+  animation: visible-glint var(--glint-duration) var(--glint-delay) ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.background-glint::before,
+.background-glint::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  transform: translate(-50%, -50%);
+}
+
+.background-glint::before {
+  width: 360%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #fff 42%, #fff 58%, transparent);
+}
+
+.background-glint::after {
+  width: 1px;
+  height: 360%;
+  background: linear-gradient(transparent, #fff 42%, #fff 58%, transparent);
+}
+
+@keyframes visible-glint {
+  0%,
+  12%,
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.15) rotate(0deg);
+  }
+
+  24% {
+    opacity: 0.48;
+  }
+
+  36% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.35) rotate(8deg);
+  }
+
+  48% {
+    opacity: 0.22;
+    transform: translate(-50%, -50%) scale(0.55) rotate(11deg);
+  }
+
+  61% {
+    opacity: 0.92;
+    transform: translate(-50%, -50%) scale(1.12) rotate(15deg);
+  }
+
+  73% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.45) rotate(18deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-glint {
+    display: none;
+  }
+}
