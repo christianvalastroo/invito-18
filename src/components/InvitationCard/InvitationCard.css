@@ -1,72 +1,338 @@
 .invitation-card {
   position: absolute;
   z-index: 3;
-  right: 7%;
   bottom: 5%;
-  left: 7%;
+  left: 5%;
   display: flex;
-  height: 122%;
+  width: 90%;
+  height: 128%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid rgb(216 222 228 / 42%);
+  border: 1px solid rgb(255 255 255 / 76%);
   border-radius: 3px;
-  color: #f7f8f9;
-  background:
-    radial-gradient(circle at 18% 22%, rgb(255 255 255 / 22%) 0 0.6px, transparent 1px),
-    radial-gradient(circle at 76% 62%, rgb(255 255 255 / 14%) 0 0.55px, transparent 1px),
-    linear-gradient(145deg, rgb(255 255 255 / 7%), transparent 38%),
-    #242a31;
-  background-size: 23px 21px, 31px 29px, auto, auto;
+  color: #fff;
+  background-color: #8d949b;
+  background-image:
+    linear-gradient(160deg, rgb(255 255 255 / 9%), rgb(63 72 81 / 12%)),
+    url('../../assets/images/intense-silver-glitter.jpg');
+  background-blend-mode: multiply, normal;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   box-shadow:
-    0 10px 18px rgb(20 24 29 / 22%),
-    inset 0 0 28px rgb(0 0 0 / 16%);
+    0 18px 32px rgb(27 32 38 / 34%),
+    0 0 0 1px rgb(67 76 84 / 22%),
+    inset 0 0 38px rgb(49 58 66 / 18%),
+    inset 0 1px 0 rgb(255 255 255 / 76%);
+  opacity: 0;
   transform: translateY(50%);
+  transform-origin: center;
+  will-change: transform, width, height;
+}
+
+.envelope-button.is-open .invitation-card {
+  animation: reveal-card 2.4s 950ms cubic-bezier(0.2, 0.7, 0.18, 1) forwards;
 }
 
 .invitation-card::before {
   position: absolute;
   inset: clamp(10px, 3vw, 18px);
-  border: 1px solid rgb(213 219 225 / 32%);
+  border: 1px solid rgb(255 255 255 / 52%);
   content: '';
   pointer-events: none;
+  z-index: 2;
+}
+
+.invitation-card::after {
+  position: absolute;
+  z-index: 0;
+  inset: -30%;
+  background: linear-gradient(
+    112deg,
+    transparent 35%,
+    rgb(255 255 255 / 10%) 43%,
+    rgb(255 255 255 / 52%) 49%,
+    rgb(255 255 255 / 16%) 54%,
+    transparent 63%
+  );
+  content: '';
+  pointer-events: none;
+  transform: translateX(-45%);
+  animation: card-glitter-sweep 7s ease-in-out infinite;
+}
+
+.invitation-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
 }
 
 .card-kicker {
+  margin-bottom: 1%;
   text-transform: uppercase;
-  font-family: Arial, sans-serif;
-  font-size: clamp(0.45rem, 1.8vw, 0.68rem);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(0.58rem, 2.4vw, 0.82rem);
+  font-weight: 600;
   letter-spacing: 0.24em;
+  -webkit-text-stroke: 0.3px rgb(20 24 28 / 72%);
+  text-shadow:
+    0 2px 3px rgb(17 21 25 / 92%),
+    0 0 7px rgb(17 21 25 / 58%);
 }
 
 .card-age {
-  margin-top: 2%;
-  color: #d6dbe0;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(3.2rem, 15vw, 5.3rem);
-  font-weight: 400;
-  line-height: 0.9;
-  text-shadow: 0 2px 8px rgb(0 0 0 / 32%);
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(5.6rem, 29vw, 10rem);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 0.72;
+  -webkit-text-stroke: 1.35px rgb(31 37 43 / 76%);
+  filter:
+    drop-shadow(0 0 7px rgb(255 255 255 / 72%))
+    drop-shadow(0 5px 4px rgb(38 44 50 / 62%));
 }
 
 .card-name {
-  margin-top: 4%;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.45rem, 7vw, 2.45rem);
-  letter-spacing: 0.02em;
+  z-index: 2;
+  margin-top: -1%;
+  color: #fff;
+  font-family: 'Great Vibes', 'Snell Roundhand', cursive;
+  font-size: clamp(3rem, 15.5vw, 5.7rem);
+  line-height: 0.9;
+  text-shadow:
+    0 2px 3px rgb(25 30 35 / 88%),
+    0 0 7px rgb(25 30 35 / 42%);
+  -webkit-text-stroke: 0.55px rgb(25 30 35 / 70%);
 }
 
-.card-divider {
-  width: 28%;
-  height: 1px;
-  margin: 5% 0 4%;
-  background: linear-gradient(90deg, transparent, #cbd1d6, transparent);
-}
-
-.card-date {
+.card-surname {
+  margin-top: 1%;
   text-transform: uppercase;
-  font-family: Arial, sans-serif;
-  font-size: clamp(0.5rem, 2vw, 0.72rem);
-  letter-spacing: 0.16em;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(0.62rem, 2.7vw, 0.92rem);
+  letter-spacing: 0.42em;
+  font-weight: 600;
+  -webkit-text-stroke: 0.3px rgb(20 24 28 / 72%);
+  text-shadow:
+    0 2px 3px rgb(17 21 25 / 92%),
+    0 0 6px rgb(17 21 25 / 54%);
+}
+
+.card-event-copy {
+  display: flex;
+  margin-top: 4.5%;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-family: 'Great Vibes', 'Snell Roundhand', cursive;
+  font-size: clamp(1.2rem, 5.5vw, 1.9rem);
+  line-height: 1.15;
+  text-shadow:
+    0 2px 3px rgb(25 30 35 / 88%),
+    0 0 6px rgb(25 30 35 / 42%);
+  -webkit-text-stroke: 0.45px rgb(25 30 35 / 68%);
+}
+
+.card-event-copy strong {
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.card-actions {
+  display: grid;
+  width: min(84%, 340px);
+  margin-top: 5.5%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 6vw, 42px);
+}
+
+.card-action {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  -webkit-text-stroke: 0.25px rgb(20 24 28 / 66%);
+  text-shadow: 0 1px 2px rgb(25 30 35 / 82%);
+}
+
+.action-icon {
+  display: grid;
+  width: clamp(52px, 15vw, 72px);
+  aspect-ratio: 1;
+  margin-bottom: 9%;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 50%;
+  color: #343b42;
+  background: linear-gradient(145deg, #f9fafb, #adb5bd);
+  box-shadow:
+    0 5px 11px rgb(53 61 69 / 22%),
+    inset 0 1px 2px rgb(255 255 255 / 80%);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.4rem, 5.6vw, 1.9rem);
+  text-shadow: none;
+}
+
+.card-action strong {
+  font-size: clamp(0.68rem, 3vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.card-action small {
+  margin-top: 3px;
+  color: rgb(255 255 255 / 92%);
+  font-size: clamp(0.58rem, 2.4vw, 0.76rem);
+}
+
+.card-footer {
+  display: flex;
+  margin-top: 5.5%;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-shadow:
+    0 2px 3px rgb(25 30 35 / 88%),
+    0 0 6px rgb(25 30 35 / 42%);
+  -webkit-text-stroke: 0.35px rgb(25 30 35 / 68%);
+}
+
+.card-footer span {
+  font-family: 'Great Vibes', 'Snell Roundhand', cursive;
+  font-size: clamp(1.75rem, 8vw, 2.8rem);
+}
+
+.card-footer small {
+  margin-top: 2%;
+  text-transform: uppercase;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: clamp(0.54rem, 2.2vw, 0.72rem);
+  letter-spacing: 0.2em;
+}
+
+.card-kicker,
+.card-surname,
+.card-event-copy,
+.card-action,
+.card-footer {
+  text-shadow:
+    -1px -1px 1px rgb(29 35 41 / 72%),
+    1px 1px 1px rgb(29 35 41 / 82%),
+    0 2px 4px rgb(29 35 41 / 58%),
+    0 0 5px rgb(255 255 255 / 28%);
+}
+
+@keyframes reveal-card {
+  0% {
+    z-index: 3;
+    bottom: 5%;
+    left: 5%;
+    width: 90%;
+    height: 128%;
+    opacity: 1;
+    transform: translateY(50%);
+  }
+
+  48% {
+    z-index: 3;
+    bottom: 5%;
+    left: 5%;
+    width: 90%;
+    height: 128%;
+    opacity: 1;
+    transform: translateY(-42%);
+  }
+
+  49% {
+    z-index: 8;
+  }
+
+  100% {
+    z-index: 8;
+    bottom: 50%;
+    left: 50%;
+    width: min(calc(100vw - 20px), 560px);
+    height: min(86svh, 760px);
+    opacity: 1;
+    transform: translate(-50%, 50%);
+  }
+}
+
+@keyframes card-glitter-sweep {
+  0%,
+  58% {
+    opacity: 0;
+    transform: translateX(-45%);
+  }
+
+  72% {
+    opacity: 1;
+  }
+
+  88%,
+  100% {
+    opacity: 0;
+    transform: translateX(45%);
+  }
+}
+
+@media (max-height: 620px) {
+  @keyframes reveal-card {
+    0% {
+      z-index: 3;
+      bottom: 5%;
+      left: 5%;
+      width: 90%;
+      height: 128%;
+      opacity: 1;
+      transform: translateY(50%);
+    }
+
+    48% {
+      z-index: 3;
+      bottom: 5%;
+      left: 5%;
+      width: 90%;
+      height: 128%;
+      opacity: 1;
+      transform: translateY(-38%);
+    }
+
+    49% {
+      z-index: 8;
+    }
+
+    100% {
+      z-index: 8;
+      bottom: 50%;
+      left: 50%;
+      width: min(calc(100vw - 16px), 540px);
+      height: 90svh;
+      opacity: 1;
+      transform: translate(-50%, 50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .envelope-button.is-open .invitation-card {
+    animation-duration: 1ms;
+    animation-delay: 1ms;
+  }
+
+  .invitation-card::after {
+    animation: none;
+  }
 }

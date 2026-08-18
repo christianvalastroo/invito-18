@@ -4,21 +4,29 @@
   aspect-ratio: 1.52;
   margin: 0;
   padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
   perspective: 1200px;
   -webkit-tap-highlight-color: transparent;
 }
 
-.envelope-button:disabled {
-  cursor: default;
+.envelope-trigger {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
-.envelope-button:focus-visible {
+.envelope-trigger:focus-visible {
   outline: 2px solid rgb(42 47 54 / 70%);
   outline-offset: 12px;
   border-radius: 8px;
+}
+
+.envelope-button.is-open .envelope-trigger {
+  pointer-events: none;
 }
 
 .envelope-shadow {
@@ -184,14 +192,15 @@
 .envelope-seal span {
   position: relative;
   z-index: 1;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.45rem, 6.5vw, 2rem);
-  font-weight: 600;
+  font-family: 'Great Vibes', 'Snell Roundhand', cursive;
+  font-size: clamp(1.7rem, 7vw, 2.25rem);
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.06em;
   text-shadow:
     0 1px 0 rgb(255 255 255 / 86%),
     0 2px 3px rgb(54 63 71 / 34%);
+  transform: rotate(-4deg) translateY(1px);
 }
 
 @media (hover: hover) {
@@ -199,7 +208,7 @@
     transition: transform 400ms ease;
   }
 
-  .envelope-button:not(:disabled):hover {
+  .envelope-button:not(.is-open):hover {
     transform: translateY(-3px);
   }
 }

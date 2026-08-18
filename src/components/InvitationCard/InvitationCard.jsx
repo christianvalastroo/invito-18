@@ -2,13 +2,38 @@ import './InvitationCard.css'
 
 function InvitationCard() {
   return (
-    <span className="invitation-card">
-      <span className="card-kicker">Sei invitato al</span>
-      <strong className="card-age">18°</strong>
-      <span className="card-name">Gioele Caudo</span>
-      <span className="card-divider" />
-      <span className="card-date">17 settembre 2026</span>
-    </span>
+    <article className="invitation-card">
+      <header className="card-heading">
+        <span className="card-kicker">Sei invitato al mio</span>
+        <strong className="card-age">18</strong>
+        <span className="card-name">Gioele</span>
+        <span className="card-surname">Caudo</span>
+      </header>
+
+      <div className="card-event-copy">
+        <span>Ti aspetto il</span>
+        <strong>17 settembre 2026</strong>
+      </div>
+
+      <div className="card-actions" aria-label="Dettagli dell'evento">
+        <span className="card-action">
+          <span className="action-icon" aria-hidden="true">⌖</span>
+          <strong>Location</strong>
+          <small>Casa Modò</small>
+        </span>
+
+        <span className="card-action">
+          <span className="action-icon" aria-hidden="true">✓</span>
+          <strong>Conferma</strong>
+          <small>su WhatsApp</small>
+        </span>
+      </div>
+
+      <footer className="card-footer">
+        <span>Parteciperai?</span>
+        <small>Giarre · Riposto</small>
+      </footer>
+    </article>
   )
 }
 

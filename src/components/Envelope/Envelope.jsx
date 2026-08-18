@@ -3,26 +3,30 @@ import InvitationCard from '../InvitationCard/InvitationCard'
 
 function Envelope({ isOpen, onOpen }) {
   return (
-    <button
+    <div
       className={`envelope-button ${isOpen ? 'is-open' : ''}`}
-      type="button"
-      aria-label={isOpen ? 'Busta aperta' : "Apri l'invito"}
-      aria-expanded={isOpen}
-      onClick={onOpen}
-      disabled={isOpen}
     >
+      <button
+        className="envelope-trigger"
+        type="button"
+        aria-label={isOpen ? 'Busta aperta' : "Apri l'invito"}
+        aria-expanded={isOpen}
+        onClick={onOpen}
+        disabled={isOpen}
+      />
+
       <span className="envelope-shadow" aria-hidden="true" />
 
-      <span className="envelope" aria-hidden="true">
-        <span className="envelope-back" />
+      <div className="envelope">
+        <span className="envelope-back" aria-hidden="true" />
         <InvitationCard />
-        <span className="envelope-flap" />
-        <span className="envelope-pocket" />
-        <span className="envelope-seal">
+        <span className="envelope-flap" aria-hidden="true" />
+        <span className="envelope-pocket" aria-hidden="true" />
+        <span className="envelope-seal" aria-hidden="true">
           <span>18</span>
         </span>
-      </span>
-    </button>
+      </div>
+    </div>
   )
 }
 
