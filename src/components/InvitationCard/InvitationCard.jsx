@@ -15,17 +15,29 @@ function InvitationCard() {
       </div>
 
       <div className="card-actions" aria-label="Dettagli dell'evento">
-        <span className="card-action">
+        <a
+          className="card-action"
+          href="https://www.google.com/maps/search/?api=1&query=Casa+Mod%C3%B2+Eventi+in+Stile%2C+Via+Madonna+della+Libert%C3%A0%2C+SS+114+Orientale+Sicula+13%2C+95018+Riposto+CT"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Apri Casa Modò su Google Maps"
+        >
           <span className="action-icon" aria-hidden="true">⌖</span>
           <strong>Location</strong>
           <small>Casa Modò</small>
-        </span>
+        </a>
 
-        <span className="card-action">
+        <a
+          className="card-action"
+          href="https://wa.me/393713545858?text=Ciao%2C%20confermo%20la%20mia%20partecipazione%20al%2018%C2%B0%20compleanno%20di%20Gioele%20del%2017%20settembre%202026."
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Conferma la partecipazione su WhatsApp"
+        >
           <span className="action-icon" aria-hidden="true">✓</span>
           <strong>Conferma</strong>
           <small>su WhatsApp</small>
-        </span>
+        </a>
       </div>
 
       <footer className="card-footer">

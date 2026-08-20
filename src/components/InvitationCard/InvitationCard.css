@@ -159,8 +159,25 @@
   align-items: center;
   color: #343a40;
   font-family: 'Montserrat', Arial, sans-serif;
+  text-decoration: none;
   -webkit-text-stroke: 0.15px rgb(255 255 255 / 48%);
   text-shadow: 0 1px 2px rgb(25 30 35 / 22%);
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.card-action:focus-visible {
+  outline: 2px solid rgb(60 68 76 / 70%);
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+@media (hover: hover) {
+  .card-action:hover {
+    filter: brightness(1.08);
+    transform: translateY(-3px);
+  }
 }
 
 .action-icon {
