@@ -38,6 +38,7 @@
 }
 
 .envelope-button.is-open .invitation-card {
+  opacity: 1;
   animation: reveal-card 2.4s 950ms cubic-bezier(0.2, 0.7, 0.18, 1) forwards;
 }
 
@@ -121,6 +122,7 @@
 }
 
 .envelope-button.is-open .card-name {
+  transform: translateY(10px) scale(0.78);
   animation: reveal-card-name 2.4s 950ms cubic-bezier(0.2, 0.7, 0.18, 1) forwards;
 }
 
