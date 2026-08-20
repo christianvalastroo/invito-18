@@ -1,8 +1,6 @@
-# 🎉 Invito digitale per il 18° di Gioele
+# 🎉 Invito digitale per il 18°
 
 > **Versione:** `1.0.0` ✨
-
-Invito digitale interattivo e responsive realizzato per il diciottesimo compleanno di Gioele, in programma il **17 settembre 2026 alle ore 20:30** presso **Casa Modò – Eventi in Stile**.
 
 Il progetto è pensato principalmente per smartphone e riproduce l'apertura di una busta elegante: dopo il tocco, il sigillo scompare, la linguetta si apre e il biglietto sale fino a occupare lo schermo.
 
