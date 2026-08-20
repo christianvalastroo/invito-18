@@ -1,6 +1,6 @@
 # 🎉 Invito digitale per il 18°
 
-> **Versione:** `1.0.0` ✨
+> **Versione:** `1.1.0` ✨
 
 Invito digitale interattivo e responsive realizzato per il diciottesimo compleanno di Gioele, in programma il **17 settembre 2026 alle ore 20:00** presso **Casa Modò – Eventi in Stile**.
 
@@ -12,6 +12,7 @@ Il progetto è pensato principalmente per smartphone e riproduce l'apertura di u
 - 📱 Biglietto responsive ottimizzato per smartphone.
 - 💎 Stile bianco, argento e glitter.
 - ✨ Effetti luminosi animati sullo sfondo.
+- 🎵 Musica riprodotta automaticamente dopo il tocco sulla busta.
 - 📍 Collegamento diretto alla posizione su Google Maps.
 - 💬 Conferma tramite WhatsApp con messaggio precompilato.
 - ♿ Supporto all'impostazione `prefers-reduced-motion`.
@@ -78,7 +79,9 @@ Controlla la qualità del codice.
 
 ```text
 src/
-├── assets/images/              # Sfondi e texture glitter
+├── assets/
+│   ├── audio/                  # Musica riprodotta all'apertura
+│   └── images/                 # Sfondi e texture glitter
 ├── components/
 │   ├── BackgroundGlints/       # Brillantini animati dello sfondo
 │   ├── Envelope/               # Busta, sigillo e animazione di apertura
@@ -105,3 +108,5 @@ npm run build
 ```
 
 ## ✅ Stato del progetto
+
+La versione `1.1.0` è completa e funzionante. 🚀
