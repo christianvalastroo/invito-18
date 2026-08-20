@@ -12,7 +12,7 @@ function InvitationCard() {
       <div className="card-event-copy">
         <span>Ti aspetto il</span>
         <strong>17 settembre 2026</strong>
-        <span>ore 20:30</span>
+        <span>ore 20:00</span>
       </div>
 
       <div className="card-actions" aria-label="Dettagli dell'evento">
@@ -30,7 +30,7 @@ function InvitationCard() {
 
         <a
           className="card-action"
-          href="https://wa.me/393713545858?text=Ciao%2C%20confermo%20la%20mia%20partecipazione%20al%2018%C2%B0%20compleanno%20di%20Gioele%20del%2017%20settembre%202026%20alle%20ore%2020%3A30."
+          href="https://wa.me/393713545858?text=Ciao%2C%20confermo%20la%20mia%20partecipazione%20al%2018%C2%B0%20compleanno%20di%20Gioele%20del%2017%20settembre%202026%20alle%20ore%2020%3A00."
           target="_blank"
           rel="noreferrer"
           aria-label="Conferma la partecipazione su WhatsApp"
