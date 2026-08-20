@@ -7,7 +7,6 @@ function InvitationCard() {
         <span className="card-kicker">Sei invitato al mio</span>
         <strong className="card-age">18</strong>
         <span className="card-name">Gioele</span>
-        <span className="card-surname">Caudo</span>
       </header>
 
       <div className="card-event-copy">
@@ -31,7 +30,6 @@ function InvitationCard() {
 
       <footer className="card-footer">
         <span>Parteciperai?</span>
-        <small>Giarre · Riposto</small>
       </footer>
     </article>
   )
