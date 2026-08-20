@@ -43,6 +43,7 @@ function InvitationCard() {
 
       <footer className="card-footer">
         <span>Parteciperai?</span>
+        <small>Si prega di dare conferma entro il 5 settembre</small>
       </footer>
     </article>
   )

@@ -230,11 +230,14 @@
 }
 
 .card-footer small {
+  max-width: 82%;
   margin-top: 2%;
   text-transform: uppercase;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: clamp(0.54rem, 2.2vw, 0.72rem);
-  letter-spacing: 0.2em;
+  line-height: 1.45;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
 .card-kicker,
