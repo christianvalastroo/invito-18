@@ -17,7 +17,7 @@ function App() {
           onOpen={() => setIsEnvelopeOpen(true)}
         />
         <p className="open-hint" aria-hidden={isEnvelopeOpen}>
-          Tocca per aprire
+          Tocca la busta per aprire l&apos;invito
         </p>
       </section>
     </main>
